@@ -27,6 +27,7 @@
   /* ===== HERO ===== */
   .hero{
     min-height:100vh;
+    min-height:100svh;
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     text-align:center;padding:60px 22px;position:relative;
     background:
@@ -302,37 +303,39 @@
         <circle r="6" fill="#caa770"/>
       </g>
       <g id="bud">
-        <ellipse cx="0" cy="-8" rx="6" ry="9" fill="#e9b8b1"/>
-        <ellipse cx="0" cy="-8" rx="6" ry="9" fill="#e9b8b1" transform="rotate(120)"/>
-        <ellipse cx="0" cy="-8" rx="6" ry="9" fill="#e9b8b1" transform="rotate(240)"/>
-        <circle r="3" fill="#c98a86"/>
+        <ellipse cx="0" cy="-2" rx="6" ry="8" fill="#e9b8b1"/>
+        <ellipse cx="0" cy="6" rx="5" ry="3" fill="#9ba582" opacity=".85"/>
       </g>
-      <g id="leaf">
-        <path d="M 0 0 Q -8 -22 0 -50 Q 8 -22 0 0 Z" fill="#a3a87a" opacity=".75"/>
-        <path d="M 0 -3 L 0 -47" stroke="#7d8358" stroke-width=".8" opacity=".5"/>
+      <!-- Eucalyptus-style sprig: a stem with small rounded leaves -->
+      <g id="sprig">
+        <path d="M 0 0 Q 2 -20 0 -55" stroke="#8a9468" stroke-width="1.2" fill="none" opacity=".75"/>
+        <ellipse cx="-7" cy="-10" rx="5" ry="7" fill="#9ba582" opacity=".75" transform="rotate(-30 -7 -10)"/>
+        <ellipse cx="7" cy="-22" rx="5" ry="7" fill="#9ba582" opacity=".75" transform="rotate(30 7 -22)"/>
+        <ellipse cx="-6" cy="-34" rx="4" ry="6" fill="#9ba582" opacity=".75" transform="rotate(-30 -6 -34)"/>
+        <ellipse cx="5" cy="-46" rx="4" ry="6" fill="#9ba582" opacity=".75" transform="rotate(30 5 -46)"/>
       </g>
     </defs>
-    <g opacity=".85">
-      <use href="#leaf" transform="translate(110 105) rotate(-40)"/>
-      <use href="#leaf" transform="translate(75 110) rotate(-90) scale(.85)"/>
-      <use href="#leaf" transform="translate(140 70) rotate(20) scale(.9)"/>
-      <use href="#leaf" transform="translate(60 80) rotate(-60) scale(.7)"/>
-      <use href="#bud" transform="translate(155 50) scale(.9)"/>
+    <g opacity=".88">
+      <!-- back layer: greenery -->
+      <use href="#sprig" transform="translate(135 105) rotate(45)"/>
+      <use href="#sprig" transform="translate(60 110) rotate(-65) scale(.9)"/>
+      <use href="#sprig" transform="translate(150 60) rotate(20) scale(.85)"/>
+      <!-- front layer: blooms -->
       <use href="#peony" transform="translate(100 80) scale(1.1)"/>
       <use href="#peony" transform="translate(60 50) scale(.85)"/>
-      <use href="#bud" transform="translate(40 95) scale(.75)"/>
+      <use href="#bud" transform="translate(40 95) scale(1)"/>
+      <use href="#bud" transform="translate(155 50) scale(.95)"/>
     </g>
   </svg>
 
   <svg class="hero-bouquet br" viewBox="0 0 240 240" aria-hidden="true">
-    <use href="#leaf" transform="translate(110 105) rotate(-40)"/>
-    <use href="#leaf" transform="translate(75 110) rotate(-90) scale(.85)"/>
-    <use href="#leaf" transform="translate(140 70) rotate(20) scale(.9)"/>
-    <use href="#leaf" transform="translate(60 80) rotate(-60) scale(.7)"/>
-    <use href="#bud" transform="translate(155 50) scale(.9)"/>
+    <use href="#sprig" transform="translate(135 105) rotate(45)"/>
+    <use href="#sprig" transform="translate(60 110) rotate(-65) scale(.9)"/>
+    <use href="#sprig" transform="translate(150 60) rotate(20) scale(.85)"/>
     <use href="#peony" transform="translate(100 80) scale(1.1)"/>
     <use href="#peony" transform="translate(60 50) scale(.85)"/>
-    <use href="#bud" transform="translate(40 95) scale(.75)"/>
+    <use href="#bud" transform="translate(40 95) scale(1)"/>
+    <use href="#bud" transform="translate(155 50) scale(.95)"/>
   </svg>
 
   <div class="ornament">~ to the heart of our home ~</div>
